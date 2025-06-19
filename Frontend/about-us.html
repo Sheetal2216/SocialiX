@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"><!--Bootstrap  link-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f7fafe;
+      color: #111;
+    }
+    .hero {
+      background: linear-gradient(to right, #e9f5ff, #fff);
+      padding: 80px 40px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .hero-text {
+      max-width: 550px;
+    }
+    .hero-text h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    .hero-text h2 strong {
+      color: #ffbb3c;
+    }
+    .hero-text p {
+      margin-bottom: 25px;
+      font-size: 16px;
+      color: #444;
+    }
+    
+   .hero-img {
+  flex: 1;
+  max-width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.hero-img img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px; /* Optional: adds nice rounded edges */
+}
+
+/* For smaller screens */
+@media (max-width: 800px) {
+  .hero-img {
+    max-width: 100%;
+    margin-top: -40px;
+ margin-bottom: -60px;
+  }
+
+  .hero-img img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+    .stats {
+      text-align: center;
+      margin: 60px 20px 40px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .stat {
+      margin: 20px;
+    }
+    .stat h3 {
+      font-size: 28px;
+      color: #111;
+    }
+    .stat p {
+      color: #777;
+    }
+
+    .values {
+      padding: 40px;
+      display: grid;
+     grid-template-columns: repeat(3, 1fr); /* Forces 3 cards per row */
+     gap: 20px;
+    }
+
+   
+@media (max-width: 1024px) {
+  .values {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens (tablets) */
+  }
+}
+
+@media (max-width: 768px) {
+  .values {
+    grid-template-columns: 1fr; /* 1 card per row on smaller screens (mobile devices) */
+  }
+}
+
+
+    .value-box {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .value-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(175, 102, 12, 0.908);
+    }
+
+    .value-box h4 {
+      margin-bottom: 10px;
+      color: rgb(17, 17, 94);
+    }
+
+    .value-box p {
+      color: #444;
+      font-size: 14px;
+    }
+/* Add a fade-in animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); /* Start from a lower position */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at the original position */
+  }
+}
+
+.value-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  opacity: 0; /* Initially hidden */
+  transform: translateY(50px); /* Initially placed lower */
+  animation: fadeInUp 0.8s ease-out forwards; /* Apply the animation */
+  animation-delay: 0.3s; /* Delay for staggered animation */
+  transition: box-shadow 0.3s ease;
+}
+
+.value-box.visible {
+  opacity: 1; /* Show the element when it becomes visible */
+  transform: translateY(0); /* Bring the element to its original position */
+}
+
+
+.values .value-box h4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.values .value-box h4 i {
+  margin-left: 10px; /* Adds some space between the text and the icon */
+  color: #ffbb3c;   /* Set the icon color */
+  font-size: 1.5em;  /* Makes the icon bigger, you can adjust this value */
+}
+
+
+/*Achievements section */
+.section-heading {
+  text-align: center;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 40px;
+  line-height: 1.4;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.section-heading span {
+  transition: all 0.4s ease;
+  display: inline-block;
+}
+
+.section-heading .orange {
+  color: #ffbb3c;
+}
+
+.section-heading .blue {
+  color: rgb(17, 17, 94);
+}
+
+.section-heading .thrive {
+  background: linear-gradient(135deg, #ff7a00, #3555ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: popIn 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes popIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-heading span:hover {
+  transform: scale(1.05);
+}
+
+
+.features-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 30px;
+  padding: 60px 40px;
+  background: #f9faff;
+}
+
+.feature-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  position: relative;
+  border: 1px solid rgba(100, 108, 255, 0.3);
+  box-shadow: 0 0 0 1px rgba(100, 108, 255, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.feature-card:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #f0f4ff, #ffffff);
+  box-shadow: 0 20px 40px rgba(100, 108, 255, 0.3);
+}
+
+.feature-card::after {
+  content: "↗";
+  font-size: 13px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #eef1ff;
+  color: #5a62e8;
+  border-radius: 50%;
+  padding: 6px;
+  line-height: 1;
+  box-shadow: 0 2px 6px rgba(90, 98, 232, 0.2);
+}
+
+.icon-wrap {
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.icon-wrap img {
+  max-height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover .icon-wrap img {
+  transform: rotate(5deg) scale(1.05);
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #202040;
+}
+
+.feature-card p {
+  font-size: 15px;
+  color: #555c6c;
+  line-height: 1.6;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/**CEO**/
+.ceo-intro {
+  background: linear-gradient(to right, #fff7f0, #f1faff);
+  padding: 60px 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.ceo-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  align-items: center;
+  gap: 40px;
+}
+
+.ceo-image {
+  flex: 1;
+  min-width: 400px;
+  max-width: 500px;
+}
+
+.ceo-image img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.ceo-details {
+  flex: 2;
+  min-width: 300px;
+}
+
+.ceo-details h3 {
+  font-size: 28px;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.ceo-details h3 span {
+  color: #ffbb3c;
+}
+
+.ceo-details h5 {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(17, 17, 94);
+  margin-bottom: 15px;
+}
+
+.ceo-details p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .ceo-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ceo-details {
+    padding-top: 20px;
+  }
+}
+
+
+
+    .goal-statement {
+      text-align: center;
+      padding: 40px;
+    }
+
+    .goal-statement h3 {
+      color: rgb(17, 17, 94);
+      margin-bottom: 15px;
+    }
+
+    .goal-statement p {
+      color: #333;
+      font-size: 16px;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .journey-banner {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .journey-banner span {
+      color: #ffbb3c;
+    }
+
+    .journey-banner strong {
+      color: rgb(17, 17, 94);
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-text {
+        margin-bottom: 20px;
+      }
+      .stats {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+/*team section*/
+ 
+h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      text-align: center;
+      color:rgb(17, 17, 94);
+    }
+
+    .team {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .member {
+      width: 200px;
+    }
+
+    .image-wrapper {
+      position: relative;
+      width: 200px;
+      height: 200px;
+    }
+
+    .image-wrapper svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .clipped-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      clip-path: url(#shape);
+    }
+
+    .name {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+
+    .name span {
+      color:#ffbb3c;
+      display: block;
+    }
+    
+  </style>
+</head>
+<body>
+
+ <section class="hero">
+  <div class="hero-text">
+    <h2><b>Step Inside the World of Socialix and <strong>Experience the Pulse of Digital Connection</strong></b></h2>
+    <p>Meet our dynamic team and discover the roadmap to success as we let you know how we work.</p>
+  </div>
+  <div class="hero-img">
+    <img src="../photos/about-us-head.jpg" alt="Team photo" />
+  </div>
+</section>
+
+
+  
+ 
+  <section class="values">
+    <div class="value-box">
+      <h4>About Our Values <i class="fas fa-info-circle"></i></h4>
+      <p>At Socialix, we value authenticity, creativity, and community. We’re here to empower real connections and support creators and brands with integrity and innovation.</p>
+    </div>
+    <div class="value-box">
+      <h4>Integrity <i class="fas fa-shield-alt"></i></h4>
+      <p>Honesty is our guiding principle, ensuring that we meet and exceed expectations.</p>
+    </div>
+    <div class="value-box">
+      <h4>Commitment <i class="fas fa-handshake"></i></h4>
+      <p>Our constant commitment to our work and clients forms an unbreakable bond.</p>
+    </div>
+    <div class="value-box">
+      <h4>Passion <i class="fas fa-fire"></i></h4>
+      <p>Passion fuels our relentless habit of excellence, continuous growth, and on-time delivery.</p>
+    </div>
+    <div class="value-box">
+      <h4>Learning <i class="fas fa-book"></i></h4>
+      <p>Our team consistently seeks opportunities to expand knowledge and enhance their skills.</p>
+    </div>
+    <div class="value-box">
+      <h4>Team-work <i class="fas fa-users"></i></h4>
+      <p>Our team members excel in collaboration and are always ready to assist one another.</p>
+    </div>
+  </section>
+  
+<section class="ceo-intro">
+  <div class="ceo-container">
+    <div class="ceo-image">
+      <img src="../photos/ceo-satish.jpg" alt="Satish Bhargav - Founder & CEO" />
+    </div>
+    <div class="ceo-details">
+      <h3><span>Satish Bhargav</span></h3>
+      <h5>Founder & CEO, SocialiX</h5>
+      <p>
+        With a strong belief in the power of creativity and digital influence, Satish Bhargav established SocialiX to help creators turn passion into profession. Under his leadership, the platform continues to grow with innovation, integrity, and impact.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  <section class="goal-statement">
+    <h3><b>Our Goal Statement</b></h3>
+    <p>At Socialix, we strive to redefine the way people connect, collaborate, and create in the digital world. Our mission is to empower creators, influencers, and brands through seamless, innovative tools that spark meaningful engagement and lasting impact. We're not just building a platform — we're shaping the future of social influence.</p>
+  </section>
+
+  
+ <!-- Achievements Section -->
+ <h2 class="section-heading">
+  <span class="orange">Features Designed</span>
+  <span class="blue">to Help You</span>
+  <span class="thrive">Thrive</span>
+</h2>
+
+
+ <section class="features-section">
+  <div class="feature-card">
+    <div class="icon-wrap"><img src="../photos/community.png" alt="Community"></div>
+    <h3>Community</h3>
+    <p>Behind every successful course is a loyal community who loves to learn, grow & engage with each other.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon-wrap"><img src="../photos/organic-growth.png" alt="Organic Growth"></div>
+    <h3>Organic Growth</h3>
+    <p>Grow your audience naturally through smart content and consistent engagement.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon-wrap"><img src="../photos/monetization.png" alt="Monetization"></div>
+    <h3>Monetization</h3>
+    <p>Unlock revenue streams and get paid for your influence and creativity.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon-wrap"><img src="../photos/virality.png" alt="Virality"></div>
+    <h3>Virality</h3>
+    <p>Boost your chances of going viral with our trend amplification tools.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon-wrap"><img src="../photos/trending-authority.png" alt="Trending Authority"></div>
+    <h3>Trending Authority</h3>
+    <p>Establish your presence on trending topics and gain thought leadership status.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon-wrap"><img src="../photos/creator-growth.png" alt="Creator Growth"></div>
+    <h3>Creator Growth</h3>
+    <p>Enhance visibility through personalized strategies that scale your brand.</p>
+  </div>
+</section>
+
+
+
+ <!-- Team Section -->
+  <h2><b>Meet the Team</b></h2>
+
+  <div class="team">
+
+    <div class="member">
+      <div class="image-wrapper">
+        <svg viewBox="0 0 200 260">
+          <defs>
+            <clipPath id="shape">
+                <path d="M0,0 L200,0 L200,200 A100,60 0 0,1 0,200 Z" />
+            </clipPath>
+          </defs>
+          <image href="c:\Users\sheet\Downloads\Screenshot 2024-08-10 042007.png" width="200" height="260" clip-path="url(#shape)" preserveAspectRatio="xMidYMid slice" />
+        </svg>
+      </div>
+      <div class="name"><span>Ashutosh Bhargav</span>Social Media Manager</div>
+    </div>
+
+    <div class="member">
+      <div class="image-wrapper">
+        <svg viewBox="0 0 200 260">
+          <defs>
+            <clipPath id="shape">
+                <path d="M0,0 L200,0 L200,200 A100,60 0 0,1 0,200 Z" />
+            </clipPath>
+          </defs>
+          <image href="../photos/team-photo-abhishek.jpg" width="200" height="260" clip-path="url(#shape)" preserveAspectRatio="xMidYMid slice" />
+        </svg>
+      </div>
+      <div class="name"><span>Abhishek Gupta</span>Visual Content Editor</div>
+    </div>
+
+    <div class="member">
+      <div class="image-wrapper">
+        <svg viewBox="0 0 200 260">
+          <defs>
+            <clipPath id="shape">
+                <path d="M0,0 L200,0 L200,200 A100,60 0 0,1 0,200 Z" />
+            </clipPath>
+          </defs>
+          <image href="../photos/team-photo-diwakar.jpg" width="200" height="260" clip-path="url(#shape)" preserveAspectRatio="xMidYMid slice" />
+        </svg>
+      </div>
+      <div class="name"><span>Diwakar Bharadwaj</span>Senior Graphic Designer</div>
+    </div>
+
+    <div class="member">
+      <div class="image-wrapper">
+        <svg viewBox="0 0 200 260">
+          <defs>
+            <clipPath id="shape">
+              <path d="M0,0 L200,0 L200,200 A100,60 0 0,1 0,200 Z" />
+            </clipPath>
+          </defs>
+          <image href="../photos/team-photo-nitin.jpg" width="200" height="260" clip-path="url(#shape)" preserveAspectRatio="xMidYMid slice" />
+        </svg>
+      </div>
+      <div class="name"><span>Nitin Chanana</span>DOP and Videographer</div>
+    </div>
+  </div>
+
+  
+  
+  
+
+  <div class="journey-banner">
+    Come join us in our journey to <span>growth</span> and <strong>betterment</strong>
+  </div>
+
+
+  <script>
+    // Function to add 'visible' class when elements come into view
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Stop observing once the element is visible
+        }
+      });
+    }, { threshold: 0.5 }); // Trigger when 50% of the element is visible
+  
+    // Select all value-box elements
+    const valueBoxes = document.querySelectorAll('.value-box');
+    
+    // Start observing each value-box
+    valueBoxes.forEach(box => {
+      observer.observe(box);
+    });
+  
+
+   
+document.addEventListener("DOMContentLoaded", function() {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.achievement-item').forEach(item => {
+    observer.observe(item);
+  });
+});
+
+
+</script>
+  
+  
+
+
+</body>
+</html>
