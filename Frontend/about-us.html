@@ -37,10 +37,13 @@
     }
     .hero-text {
       max-width: 550px;
+    
     }
     .hero-text h2 {
-      font-size: 36px;
+      font-size: 39px;
       margin-bottom: 20px;
+        text-align: left;
+        
     }
     .hero-text h2 strong {
       color: #ffbb3c;
@@ -314,70 +317,65 @@
 
 /**CEO**/
 .ceo-intro {
-  background: linear-gradient(to right, #fff7f0, #f1faff);
-  padding: 60px 30px;
-  display: flex;
-  justify-content: center;
-}
+    padding: 50px 20px;
+    background: #fefefe;
+    font-family: 'Segoe UI', sans-serif;
+  }
 
-.ceo-container {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  align-items: center;
-  gap: 40px;
-}
-
-.ceo-image {
-  flex: 1;
-  min-width: 400px;
-  max-width: 500px;
-}
-
-.ceo-image img {
-  width: 100%;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.ceo-details {
-  flex: 2;
-  min-width: 300px;
-}
-
-.ceo-details h3 {
-  font-size: 28px;
-  color: #111;
-  margin-bottom: 10px;
-}
-
-.ceo-details h3 span {
-  color: #ffbb3c;
-}
-
-.ceo-details h5 {
-  font-size: 16px;
-  font-weight: 600;
-  color: rgb(17, 17, 94);
-  margin-bottom: 15px;
-}
-
-.ceo-details p {
-  font-size: 15px;
-  color: #444;
-  line-height: 1.7;
-}
-
-@media (max-width: 768px) {
   .ceo-container {
-    flex-direction: column;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  .ceo-image img {
+    width: 500px;
+    max-width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
 
   .ceo-details {
-    padding-top: 20px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 600px;
   }
-}
+
+  .ceo-details h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: navy;
+  }
+
+  .ceo-details h3 {
+    font-size: 1.2rem;
+    color:#ffbb3c ;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+
+  .ceo-details p {
+    font-size: 1.1rem;
+    color: #272626;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  @media (max-width: 600px) {
+    .ceo-container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .ceo-details p {
+      text-align: center;
+      padding: 0 10px;
+    }
+  }
 
 
 
@@ -433,7 +431,7 @@ h2 {
       font-size: 2.5rem;
       margin-bottom: 40px;
       text-align: center;
-      color:rgb(17, 17, 94);
+      color:navy;
     }
 
     .team {
@@ -473,11 +471,15 @@ h2 {
       font-size: 16px;
       font-weight: bold;
       line-height: 1.2;
+      color: #ffbb3c;
+     
     }
 
     .name span {
-      color:#ffbb3c;
+      color:rgb(17, 17, 94);
       display: block;
+      font-size: 20px;
+  text-align: justify;
     }
     
   </style>
@@ -486,7 +488,8 @@ h2 {
 
  <section class="hero">
   <div class="hero-text">
-    <h2><b>Step Inside the World of Socialix and <strong>Experience the Pulse of Digital Connection</strong></b></h2>
+    <h2><b>Grow your social media, 
+      <strong>amplify your brand – we turn followers into customers</strong></b></h2>
     <p>Meet our dynamic team and discover the roadmap to success as we let you know how we work.</p>
   </div>
   <div class="hero-img">
@@ -499,102 +502,54 @@ h2 {
  
   <section class="values">
     <div class="value-box">
-      <h4>About Our Values <i class="fas fa-info-circle"></i></h4>
+      <h4><b>About Our Values </b><i class="fas fa-info-circle"></i></h4>
       <p>At Socialix, we value authenticity, creativity, and community. We’re here to empower real connections and support creators and brands with integrity and innovation.</p>
     </div>
     <div class="value-box">
-      <h4>Integrity <i class="fas fa-shield-alt"></i></h4>
+      <h4><b>Integrity </b><i class="fas fa-shield-alt"></i></h4>
       <p>Honesty is our guiding principle, ensuring that we meet and exceed expectations.</p>
     </div>
     <div class="value-box">
-      <h4>Commitment <i class="fas fa-handshake"></i></h4>
+      <h4><b>Commitment</b> <i class="fas fa-handshake"></i></h4>
       <p>Our constant commitment to our work and clients forms an unbreakable bond.</p>
     </div>
     <div class="value-box">
-      <h4>Passion <i class="fas fa-fire"></i></h4>
+      <h4> <b>Passion </b><i class="fas fa-fire"></i></h4>
       <p>Passion fuels our relentless habit of excellence, continuous growth, and on-time delivery.</p>
     </div>
     <div class="value-box">
-      <h4>Learning <i class="fas fa-book"></i></h4>
+      <h4><b>Learning</b> <i class="fas fa-book"></i></h4>
       <p>Our team consistently seeks opportunities to expand knowledge and enhance their skills.</p>
     </div>
     <div class="value-box">
-      <h4>Team-work <i class="fas fa-users"></i></h4>
+      <h4><b>Team-work </b><i class="fas fa-users"></i></h4>
       <p>Our team members excel in collaboration and are always ready to assist one another.</p>
     </div>
   </section>
   
 <section class="ceo-intro">
   <div class="ceo-container">
+
+    <!-- CEO Image -->
     <div class="ceo-image">
-      <img src="../photos/ceo-satish.jpg" alt="Satish Bhargav - Founder & CEO" />
+      <img src="../photos/ceo-satish.jpg" alt="Satish Bhargav - Founder & CEO">
     </div>
+
+    <!-- CEO Details -->
     <div class="ceo-details">
-      <h3><span>Satish Bhargav</span></h3>
-      <h5>Founder & CEO, SocialiX</h5>
+      <h1><b>Satish Bhargav</b></h1>
+      <h3><b>Founder & CEO, SocialiX</b></h3>
       <p>
-        With a strong belief in the power of creativity and digital influence, Satish Bhargav established SocialiX to help creators turn passion into profession. Under his leadership, the platform continues to grow with innovation, integrity, and impact.
+        With a deep belief in the power of creativity and digital influence, Satish Bhargav founded SocialiX to help creators turn their passion into a profession. <br>
+        Under his leadership, the platform continues to grow — built on innovation, driven by purpose, and shaped by impact.
       </p>
     </div>
+
   </div>
 </section>
 
 
-  <section class="goal-statement">
-    <h3><b>Our Goal Statement</b></h3>
-    <p>At Socialix, we strive to redefine the way people connect, collaborate, and create in the digital world. Our mission is to empower creators, influencers, and brands through seamless, innovative tools that spark meaningful engagement and lasting impact. We're not just building a platform — we're shaping the future of social influence.</p>
-  </section>
-
-  
- <!-- Achievements Section -->
- <h2 class="section-heading">
-  <span class="orange">Features Designed</span>
-  <span class="blue">to Help You</span>
-  <span class="thrive">Thrive</span>
-</h2>
-
-
- <section class="features-section">
-  <div class="feature-card">
-    <div class="icon-wrap"><img src="../photos/community.png" alt="Community"></div>
-    <h3>Community</h3>
-    <p>Behind every successful course is a loyal community who loves to learn, grow & engage with each other.</p>
-  </div>
-
-  <div class="feature-card">
-    <div class="icon-wrap"><img src="../photos/organic-growth.png" alt="Organic Growth"></div>
-    <h3>Organic Growth</h3>
-    <p>Grow your audience naturally through smart content and consistent engagement.</p>
-  </div>
-
-  <div class="feature-card">
-    <div class="icon-wrap"><img src="../photos/monetization.png" alt="Monetization"></div>
-    <h3>Monetization</h3>
-    <p>Unlock revenue streams and get paid for your influence and creativity.</p>
-  </div>
-
-  <div class="feature-card">
-    <div class="icon-wrap"><img src="../photos/virality.png" alt="Virality"></div>
-    <h3>Virality</h3>
-    <p>Boost your chances of going viral with our trend amplification tools.</p>
-  </div>
-
-  <div class="feature-card">
-    <div class="icon-wrap"><img src="../photos/trending-authority.png" alt="Trending Authority"></div>
-    <h3>Trending Authority</h3>
-    <p>Establish your presence on trending topics and gain thought leadership status.</p>
-  </div>
-
-  <div class="feature-card">
-    <div class="icon-wrap"><img src="../photos/creator-growth.png" alt="Creator Growth"></div>
-    <h3>Creator Growth</h3>
-    <p>Enhance visibility through personalized strategies that scale your brand.</p>
-  </div>
-</section>
-
-
-
- <!-- Team Section -->
+<!-- Team Section -->
   <h2><b>Meet the Team</b></h2>
 
   <div class="team">
@@ -652,10 +607,81 @@ h2 {
           <image href="../photos/team-photo-nitin.jpg" width="200" height="260" clip-path="url(#shape)" preserveAspectRatio="xMidYMid slice" />
         </svg>
       </div>
-      <div class="name"><span>Nitin Chanana</span>DOP and Videographer</div>
+      <div class="name"><span>Nitin Chanana</span>Photography & Film Lead</div>
+    </div>
+ 
+
+   <div class="member">
+      <div class="image-wrapper">
+        <svg viewBox="0 0 200 260">
+          <defs>
+            <clipPath id="shape">
+              <path d="M0,0 L200,0 L200,200 A100,60 0 0,1 0,200 Z" />
+            </clipPath>
+          </defs>
+          <image href="../photos/team-photo-sheetal.jpg" width="200" height="260" clip-path="url(#shape)" preserveAspectRatio="xMidYMid slice" />
+        </svg>
+      </div>
+      <div class="name"><span>Sheetal Pandey</span>Web Developer</div>
     </div>
   </div>
+   </div>
 
+  <section class="goal-statement">
+    <h3><b>Our Goal Statement</b></h3>
+    <p>At Socialix, we strive to redefine the way people connect, collaborate, and create in the digital world. Our mission is to empower creators, influencers, and brands through seamless, innovative tools that spark meaningful engagement and lasting impact. We're not just building a platform — we're shaping the future of social influence.</p>
+  </section>
+
+  
+ <!-- Achievements Section -->
+ <h2 class="section-heading">
+  <span class="orange">Features Designed</span>
+  <span class="blue">to Help You</span>
+  <span class="thrive">Thrive</span>
+</h2>
+
+
+ <section class="features-section">
+  <div class="feature-card">
+    <div class="icon-wrap"><img src="../photos/community.png" alt="Community"></div>
+    <h3>Community</h3>
+    <p>Behind every successful course is a loyal community who loves to learn, grow & engage with each other.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon-wrap"><img src="../photos/organic-growth.png" alt="Organic Growth"></div>
+    <h3>Organic Growth</h3>
+    <p>Grow your audience naturally through smart content and consistent engagement.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon-wrap"><img src="../photos/monetization.png" alt="Monetization"></div>
+    <h3>Monetization</h3>
+    <p>Unlock revenue streams and get paid for your influence and creativity.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon-wrap"><img src="../photos/virality.png" alt="Virality"></div>
+    <h3>Virality</h3>
+    <p>Boost your chances of going viral with our trend amplification tools.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon-wrap"><img src="../photos/trending-authority.png" alt="Trending Authority"></div>
+    <h3>Trending Authority</h3>
+    <p>Establish your presence on trending topics and gain thought leadership status.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon-wrap"><img src="../photos/creator-growth.png" alt="Creator Growth"></div>
+    <h3>Creator Growth</h3>
+    <p>Enhance visibility through personalized strategies that scale your brand.</p>
+  </div>
+</section>
+
+
+
+ 
   
   
   
