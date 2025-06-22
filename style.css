@@ -215,7 +215,6 @@ button {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  filter: brightness(80%);
   display: block;
 
 }
@@ -395,15 +394,12 @@ button {
   transform: scale(1.05);
 }
 
-
-
 .hero-image img {
   width: 100%;
-  max-width: 400px;
+  width: 300px;
   height: auto;
   border-radius: 12px;
    flex: 1 1 40%;
-  text-align: center;
 }
 
 /* Responsive */
