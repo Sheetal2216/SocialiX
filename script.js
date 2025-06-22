@@ -49,7 +49,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("pos2"),
     document.getElementById("pos3"),
     document.getElementById("pos4"),
-    document.getElementById("pos5")
+    document.getElementById("pos5"),
+    document.getElementById("pos6"),
+    document.getElementById("pos7")
   ];
 
   let currentIndex = 2; // Start at pos3 (checked)

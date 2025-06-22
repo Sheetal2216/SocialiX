@@ -568,13 +568,16 @@ div.item {
 .item:nth-of-type(3) { --offset: 3; }
 .item:nth-of-type(4) { --offset: 4; }
 .item:nth-of-type(5) { --offset: 5; }
-
+.item:nth-of-type(6) { --offset: 6; }
+.item:nth-of-type(7) { --offset: 7; }
 /* Position triggers */
 #pos1:checked ~ main#carousel { --position: 1; }
 #pos2:checked ~ main#carousel { --position: 2; }
 #pos3:checked ~ main#carousel { --position: 3; }
 #pos4:checked ~ main#carousel { --position: 4; }
 #pos5:checked ~ main#carousel { --position: 5; }
+#pos6:checked ~ main#carousel { --position: 6; }
+#pos7:checked ~ main#carousel { --position: 7; }
 
 /* Dots styling */
 .dots {
@@ -597,9 +600,12 @@ div.item {
 #pos2:checked ~ .dots label[for="pos2"],
 #pos3:checked ~ .dots label[for="pos3"],
 #pos4:checked ~ .dots label[for="pos4"],
-#pos5:checked ~ .dots label[for="pos5"] {
+#pos5:checked ~ .dots label[for="pos5"],
+#pos6:checked ~ .dots label[for="pos6"],
+#pos7:checked ~ .dots label[for="pos7"] {
   background: black;
 }
+
 
 /* Fade-in Animation */
 #creators-review {
